@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginBottom="@dimen/fab_margin">
+
+        <Button
+            android:id="@+id/start_updates_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginTop="@dimen/narrow_space"
+            android:text="@string/request_activity_updates" />
+
+        <Button
+            android:id="@+id/stop_updates_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginTop="@dimen/narrow_space"
+            android:text="@string/remove_activity_updates" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/total_activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/narrow_space"
+        android:layout_marginTop="@dimen/narrow_space"
+        android:text="@string/activity_index_title"
+        android:textSize="@dimen/headline_text_size" />
+
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:max="30"
+        android:enabled="false"
+        android:progressDrawable="@drawable/seekbar"
+        android:thumb="@drawable/seekbar_thumb"
+        android:layout_marginBottom="@dimen/fab_margin"/>
+
+    <TextView
+        android:id="@+id/detected_activities_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/narrow_space"
+        android:layout_marginTop="@dimen/narrow_space"
+        android:text="@string/detected_activities_title"
+        android:textSize="@dimen/headline_text_size" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:showIn="@layout/list_item">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
