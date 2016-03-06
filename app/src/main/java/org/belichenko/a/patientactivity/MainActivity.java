@@ -14,6 +14,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -91,7 +92,13 @@ public class MainActivity extends AppCompatActivity implements
         setButtonsEnabledState();
         // Kick off the request to build GoogleApiClient.
         buildGoogleApiClient();
-
+        // Disable seekbar
+        mTotalActivity.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
     }
 
     private void checkCurrentState() {
