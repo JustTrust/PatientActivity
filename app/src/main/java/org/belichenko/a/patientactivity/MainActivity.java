@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
@@ -172,7 +173,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onConnectionFailed(ConnectionResult result) {
+    public void onConnectionFailed(@NonNull ConnectionResult result) {
         // Refer to the javadoc for ConnectionResult to see what error codes might be returned in
         // onConnectionFailed.
         Log.d(TAG, "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
@@ -241,7 +242,7 @@ public class MainActivity extends AppCompatActivity implements
      * @param status The Status returned through a PendingIntent when requestActivityUpdates()
      *               or removeActivityUpdates() are called.
      */
-    public void onResult(Status status) {
+    public void onResult(@NonNull Status status) {
 
         Log.d(TAG, "onResult() called with: " + "status = [" + status + "]");
         if (status.isSuccess()) {

@@ -23,4 +23,6 @@
 
     <string name="not_connected">GoogleApiClient not yet connected. Try again.</string>
     <string name="current_activity_is_abscent">Nothing to show. Try turn on monitor.</string>
+    <string name="activity_bad">bad</string>
+    <string name="activity_good">good</string>
 </resources>
